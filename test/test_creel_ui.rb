@@ -1,20 +1,31 @@
 require "minitest/autorun"
 require "rack/test"
+
 require "creel/ui"
 
-class TestCreelUI < MiniTest::Unit::TestCase
+describe Creel::UI do
+  ######################################################################
+  ### Rack::Test setup
+  ######################################################################
   include Rack::Test::Methods
 
   def app
     Creel::UI
   end
 
-  def test_any_get_returns_static_text
-    root = get "/"
-    path = get "/some/path/#{rand 100}/etc"
+  ######################################################################
+  ### Examples
+  ######################################################################
 
-    assert_equal "nothing to see here", root.body
-    assert_equal "nothing to see here", path.body
+  describe "GET" do
+    it "returns static text" do
+
+      root = get "/"
+      path = get "/some/path/#{rand 100}/etc"
+
+      assert_equal "nothing to see here", root.body
+      assert_equal "nothing to see here", path.body
+    end
   end
 
 end
