@@ -14,7 +14,9 @@ Hoe.spec 'creel' do
   self.testlib = :minitest
 
   ### Runtime dependencies
-  extra_deps << [ 'sinatra', '~> 1.1.2' ]
+  extra_deps << [ 'mongo',    '1.2.0'    ]
+  extra_deps << [ 'bson_ext', '1.2.0'    ]
+  extra_deps << [ 'sinatra',  '~> 1.1.2' ]
 
   ### Development dependencies
   extra_dev_deps << [ 'hoe',       '~> 2.9.1' ]

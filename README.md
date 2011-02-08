@@ -21,6 +21,9 @@ for later reference.
 For production:
 
 * [Sinatra]
+* The official [MongoDB][mongoruby] Ruby driver, with `bson_ext`
+
+[mongoruby]: http://www.mongodb.org/display/DOCS/Ruby+Language+Center
 
 For development, you may also want:
 

@@ -1,3 +1,5 @@
+mongo --version '1.2.0'
+bson_ext --version '1.2.0'
 sinatra --version '~> 1.1.2'
 minitest --version '~> 2.0.2'
 rack-test --version '~> 0.5.7'
