@@ -1,5 +1,6 @@
 $: << File.expand_path("..", __FILE__)
 
+require 'creel/helpers'
 require 'creel/ui'
 
 module Creel
