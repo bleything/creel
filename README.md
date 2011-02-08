@@ -27,12 +27,14 @@ For production:
 
 For development, you may also want:
 
-* [minitest]
 * [hoe]
+* [minitest]
+* [mocha]
 * [rack-test]
 
-[minitest]: http://github.com/seattlerb/minitest
 [hoe]: http://seattlerb.rubyforge.org/hoe
+[minitest]: http://github.com/seattlerb/minitest
+[mocha]: http://mocha.rubyforge.org
 [rack-test]: http://github.com/brynary/rack-test
 
 ### Other Stuff

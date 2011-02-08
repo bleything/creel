@@ -22,5 +22,6 @@ Hoe.spec 'creel' do
   extra_dev_deps << [ 'hoe',       '~> 2.9.1' ]
   extra_dev_deps << [ 'minitest',  '~> 2.0.2' ]
   extra_dev_deps << [ 'rack-test', '~> 0.5.7' ]
+  extra_dev_deps << [ 'mocha',     '~> 0.9.11' ]
 
 end
