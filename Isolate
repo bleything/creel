@@ -1,0 +1,6 @@
+gem "sinatra",        "1.1.2"
+
+env :test do
+  gem "minitest",  "2.0.2"
+  gem "rack-test", "0.5.7"
+end
