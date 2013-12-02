@@ -1,4 +1,5 @@
 require "minitest/autorun"
+require "mocha"
 require "creel/helpers"
 
 describe Creel::Helpers do
@@ -24,8 +25,14 @@ describe Creel::Helpers do
     end
   end
 
-  def test_translate_path_replaces_slashes_with_underscores
-    assert_equal "foo_bar", @t.translate_path( "foo/bar" )
+  describe '#db' do
+    it "returns a database object" do
+      @conn = mock
+      Mongo::Connection.expects( :new ).returns( @conn )
+      @conn.expects( :db ).with( 'creel' )
+
+      @t.db
+    end
   end
 
 end

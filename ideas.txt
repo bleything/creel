@@ -1,0 +1,13 @@
+- add plugin system
+    - Creel is a basic app that knows how to capture a given payload and
+      try to deserialize it and stash in mongo
+    - plugins can be written that know how to deserialize a particular
+      service's hooks
+        - maybe have plugins inherit from Creel but implement a special
+          method that can decompose a POST body and return it as a hash?
+    - plugins are mounted at specific URL spaces in the config.ru:
+        map( '/'         ) { run Creel           }
+        map( '/github'   ) { run Creel::GitHub   }
+        map( '/sendgrid' ) { run Creel::Sendgrid }
+    - provide migration path that can reprocess all hooks received by
+      regular Creel before a plugin was installed

@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'hoe'
 
-Hoe.plugin :doofus, :git
+Hoe.plugin :doofus, :git, :heroku
 
 Hoe.spec 'creel' do
   developer 'Ben Bleything', 'ben@bleything.net'
